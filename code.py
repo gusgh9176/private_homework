@@ -20,8 +20,6 @@ for i in range(65,91):
 for j in range(key):
     temp = word2.pop(0)
     word2.append(temp)
-    
-print(word)
 print(word2)
 for i in range(97,123):
     s_word.append(chr(i))
@@ -30,8 +28,6 @@ for i in range(97,123):
 for j in range(key):
     temp = s_word2.pop(0)
     s_word2.append(temp)
-    
-print(s_word)
 print(s_word2)
 
 for i in range(len(string)):
@@ -51,5 +47,8 @@ for i in range(len(string)):
         result = result + " "
     switch = True
 print(result)
+f.close()
+f = open("decrypted.txt",'w')
+f.write(result)
 f.close()
 
