@@ -44,10 +44,10 @@ for i in range(len(string)):
             result = result + s_word2[j]
             switch = False
             continue
-    if(switch and !(string[i].isspace())):
+    if(switch and not(string[i].isspace())):
         result = result + string[i]
         switch = False
-    else
+    else:
         result = result + " "
     switch = True
 print(result)
