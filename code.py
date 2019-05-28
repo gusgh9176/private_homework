@@ -39,12 +39,15 @@ for i in range(len(string)):
         if(string[i] == word[j]):
             result = result + word2[j]
             switch = False
+            continue
         elif(string[i] == s_word[j]):
             result = result + s_word2[j]
             switch = False
+            continue
         elif(isNum(string[i])):
             result = result + string[i]
             switch = False
+            continue
     if(switch):
         result = result + " "
     switch = True
