@@ -1,3 +1,9 @@
+def isNum(num):
+    try:
+        float(num)
+        return True
+    except ValueError:
+        return False
 f = open("ciphertext.txt", 'r')
 key = int(input())
 string = f.read()
@@ -36,7 +42,7 @@ for i in range(len(string)):
         elif(string[i] == s_word[j]):
             result = result + s_word2[j]
             switch = False
-        elif(string[i].isdigit()):
+        elif(isNum(string[i])):
             result = result + string[i]
             switch = False
     if(switch):
