@@ -46,7 +46,7 @@ for i in range(len(string)):
     elif(switch):
         result = result + " "
     switch = True
-print(result)
+#print(result)
 f.close()
 f = open("decrypted.txt",'w')
 f.write(result)
