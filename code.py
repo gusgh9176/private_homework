@@ -1,22 +1,31 @@
 f = open("ciphertext.txt", 'r')
+key = int(input())
 string = f.read()
 word = []
-s_word = []
+s_word = [] #word to word2(Upper)
 word2 = []
 s_word2 = []
 result = ""
 switch = True
 for i in range(65,91):
     word.append(chr(i))
+    word2.append(chr(i))
+
+for j in range(key):
+    temp = word2.pop(0)
+    word2.append(temp)
+    
 print(word)
-for j in range(len(word)):
-    word2.append(word[len(word)-j-1])
 print(word2)
 for i in range(97,123):
     s_word.append(chr(i))
+    s_word2.append(chr(i))
+    
+for j in range(key):
+    temp = s_word2.pop(0)
+    s_word2.append(temp)
+    
 print(s_word)
-for j in range(len(s_word)):
-    s_word2.append(s_word[len(word)-j-1])
 print(s_word2)
 
 for i in range(len(string)):
@@ -31,4 +40,5 @@ for i in range(len(string)):
         result = result + " "
     switch = True
 print(result)
+f.close()
 
