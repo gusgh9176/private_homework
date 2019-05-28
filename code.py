@@ -47,7 +47,7 @@ for i in range(len(string)):
     if(switch and not(string[i].isspace())):
         result = result + string[i]
         switch = False
-    else:
+    elif(switch)
         result = result + " "
     switch = True
 print(result)
