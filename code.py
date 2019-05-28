@@ -30,6 +30,5 @@ for i in range(len(string)):
     if(switch):
         result = result + " "
     switch = True
-print(string)
 print(result)
 
