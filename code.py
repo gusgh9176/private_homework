@@ -36,6 +36,9 @@ for i in range(len(string)):
         elif(string[i] == s_word[j]):
             result = result + s_word2[j]
             switch = False
+        elif(string[i].isdigit()):
+            result = result + string[i]
+            switch = False
     if(switch):
         result = result + " "
     switch = True
