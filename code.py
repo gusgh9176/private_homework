@@ -47,7 +47,7 @@ for i in range(len(string)):
     if(isNum(string[i])):
         result = result + string[i]
         switch = False
-    if(switch):
+    if(switch and string[i]!="." and string[i]!="," and string[i]!="-" and string[i]!="\""):
         result = result + " "
     switch = True
 print(result)
