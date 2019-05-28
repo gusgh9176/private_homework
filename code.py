@@ -44,10 +44,9 @@ for i in range(len(string)):
             result = result + s_word2[j]
             switch = False
             continue
-        elif(isNum(string[i])):
-            result = result + string[i]
-            switch = False
-            continue
+    if(isNum(string[i])):
+        result = result + string[i]
+        switch = False
     if(switch):
         result = result + " "
     switch = True
